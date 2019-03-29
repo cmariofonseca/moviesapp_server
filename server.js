@@ -6,14 +6,14 @@ const request = require('request');
 const async = require('async');
 
 // Puerto variable para que pueda usar el que ofrezca el servidor de almacenamiento o por defecto 3000
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 // Levantamiento de servidor
 app.listen(app.get('port'), () => {
   console.log('Server on port ', app.get('port'));
 });
 
 // Permite connexión entre dos servidores
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors());
 
 // Se definen claves para acceso a api rest publica
 const apikey = '4e14ecb1fbb3b47726768e430a56b074';
